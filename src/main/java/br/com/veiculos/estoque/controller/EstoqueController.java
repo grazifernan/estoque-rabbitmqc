@@ -1,5 +1,6 @@
 package br.com.veiculos.estoque.controller;
 
+import br.com.veiculos.estoque.constantes.RabbitmqConstantes;
 import br.com.veiculos.estoque.dto.EstoqueDTO;
 import br.com.veiculos.estoque.service.RabbitmqService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class EstoqueController {
     @PutMapping
     private ResponseEntity atualizaEstoque(@RequestBody EstoqueDTO estoqueDTO){
         System.out.println("ESTOQUE" + estoqueDTO.codmodelo);
-        rabbitmqService.enviaMensagem("estoque.atualizar", estoqueDTO);
+        rabbitmqService.enviaMensagem(RabbitmqConstantes.NOME_QUEUE, estoqueDTO);
         return  new ResponseEntity(HttpStatus.OK);
     }
 }
