@@ -1,0 +1,10 @@
+server:
+  port: 8090
+
+spring:
+  rabbitmq:
+    addresses: amqps://tzyektvn:e5pfYqd-gz7wAL3vjlchqWvRcY0Xj13K@jackal.rmq.cloudamqp.com/tzyektvn
+    host: jackal.rmq.cloudamqp.com
+    username: tzyektvn
+    password: e5pfYqd-gz7wAL3vjlchqWvRcY0Xj13K
+    port: 1883
