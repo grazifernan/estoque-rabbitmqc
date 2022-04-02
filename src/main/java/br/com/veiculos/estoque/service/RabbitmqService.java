@@ -13,6 +13,7 @@ public class RabbitmqService {
 
     public void enviaMensagem(String nomeFila, EstoqueDTO mensagem){
         this.rabbitTemplate.convertAndSend(nomeFila, mensagem);
+
     }
 
 }
